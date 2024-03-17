@@ -176,7 +176,9 @@
                 </div>
             </div>
         </div>
-
+        <form action="/product/register" method="get">
+            <button>상품 등록 하기</button>
+        </form>
     </div>
     <div class="row content">
     </div>
