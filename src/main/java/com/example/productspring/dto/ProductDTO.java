@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
 
 @ToString
 @Data
@@ -12,6 +13,7 @@ import javax.validation.constraints.Min;
 @NoArgsConstructor
 public class ProductDTO {
     private int id;
+    @Size(min = 1, max = 100)
     private String name;
     @Min(value = 0, message = "가격은 양수여야 합니다.")
     @Max(value = 1000000, message = "가격은 1,000,000을 초과할 수 없습니다.")
