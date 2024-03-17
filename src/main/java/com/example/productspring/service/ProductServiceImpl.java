@@ -49,6 +49,11 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
+    public Boolean findName(String name) {
+        return productMapper.selectName(name).equals(name);
+    }
+
+    @Override
     public List<ProductDTO> getList(String name) {
         List<ProductVO> voList = productMapper.selectList(name);
         List<ProductDTO> dtoList = voList.stream()

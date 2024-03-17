@@ -12,6 +12,9 @@
     <select id="selectOne" resultType="com.example.productspring.domain.ProductVO">
         select * from product where id = #{id};;
     </select>
+    <select id="selectName" resultType="String">
+        select name from product where name = #{name};;
+    </select>
     <delete id="delete">
         delete from product where id = #{id}
     </delete>

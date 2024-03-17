@@ -13,4 +13,5 @@ public interface ProductMapper {
     void delete(long id);
     void update(ProductVO productVO);
     int getCount();
+    String selectName(String name);
 }

@@ -33,6 +33,10 @@ public class ProductController {
     @PostMapping("/register")
     public String registerPost(@Valid ProductDTO productDTO, BindingResult bindingResult, RedirectAttributes redirectAttributes){
         log.info("register");
+        if(productService.findName(productDTO.getName())){
+            log.info("상품 중복 이름 오류");
+            return "redirect:/product/register";
+        }
         if(bindingResult.hasErrors()){
             log.info(bindingResult.getAllErrors());
             redirectAttributes.addFlashAttribute(bindingResult.getAllErrors());

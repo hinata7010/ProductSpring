@@ -11,4 +11,5 @@ public interface ProductService {
     ProductDTO getOne(long id);
     void remove(long id);
     void modify(ProductDTO todoDTO);
+    Boolean findName(String name);
 }
